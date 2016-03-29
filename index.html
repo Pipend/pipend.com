@@ -39,19 +39,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">PIPE</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#query">Query</a>
                     </li>
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="#transform">Transform</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#visualize">Visualize</a>
+                    </li>
+                    <li>
+                        <a href="#share">Share</a>
                     </li>
                 </ul>
             </div>
@@ -64,11 +67,25 @@
     <header class="header-image">
         <div class="headline">
             <div class="container">
+                <img src="images/pipe.svg" style="width: 50%" />
                 <h1>PIPE</h1>
                 <h2>One platform to query, join, analyze and visualize, any data source</h2>
             </div>
         </div>
     </header>
+
+    <svg width="0" height="0" style="margin: 0; padding: 0">
+      <defs>
+        <radialGradient id="fadeGrad" cx=".5" cy=".5" r=".5">
+          <stop offset="0%" stop-color="white" stop-opacity="1"/>
+          <stop offset="90%" stop-color="white" stop-opacity="1"/>
+          <stop offset="100%" stop-color="white" stop-opacity="0"/>
+        </radialGradient>
+        <mask id="fade" maskContentUnits="objectBoundingBox">
+          <rect width="1" height="1" fill="url(#fadeGrad)"/>
+        </mask>
+      </defs>
+    </svg>
 
     <!-- Page Content -->
     <div class="container">
@@ -76,8 +93,11 @@
         <hr class="featurette-divider">
 
         <!-- First Featurette -->
-        <div class="featurette" id="about">
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+        <div class="featurette" id="query">
+            <!-- <img class="featurette-image img-circle img-responsive pull-right" src="images/econnections.png"> -->
+            <svg class="featurette-image img-responsive pull-right" width="500" height="500">
+              <image xlink:href="images/rconnections.png" x="0" y="0" width="100%" height="100%" mask="url(#fade)" />
+            </svg>
             <h2 class="featurette-heading">Query
                 <span class="text-muted">any database</span>
             </h2>
@@ -93,24 +113,31 @@
                     <li>Any Web API (using cURL) or Stream (using Sockets)</li>
                 </ul>
             </p>
+            <p class="lead">
+                Pipe queries can be composed with each other for creating larger computations like joining MongoDB with a SQL database.
+            </p>
         </div>
 
         <hr class="featurette-divider">
 
         <!-- Second Featurette -->
-        <div class="featurette" id="services">
-            <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
+        <div class="featurette" id="transform">
+            <svg class="featurette-image img-responsive pull-left" width="500" height="500">
+              <image xlink:href="images/transformation.png" x="0" y="0" width="100%" height="100%" mask="url(#fade)" />
+            </svg>
             <h2 class="featurette-heading">Transform
                 <span class="text-muted">the result</span>
             </h2>
             <div class="lead">
 
             <p>
-               Some analysis are only possible or easier and faster done on the result of the query at client-side.
+               Some analysis are only possible or easier and faster done on the result of the query.
             </p>
-
             <p>
-                Use Pipe's innovative Transformation block to manipulate the result of your query by built-in utilities and statistical functions. (or import your favorite JavaScript library)
+               For example if you want to find how many standard deviation each of your data points are away from their mean, without Pipe you had to first execute a query, copy its result into Excel or R and then do your analysis.
+            </p>
+            <p>
+                Use Pipe's innovative Transformation pipeline to manipulate the result of your query and perform statistical analysis directly on the result without having to copy and paste into another software. Use Pipe's built-in utilities or import your favorite JavaScript library.
             </p>
             </div>
         </div>
@@ -118,23 +145,34 @@
         <hr class="featurette-divider">
 
         <!-- Third Featurette -->
-        <div class="featurette" id="contact">
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+        <div class="featurette" id="visualize">
+            <svg class="featurette-image img-responsive pull-right" width="500" height="500">
+              <image xlink:href="images/vis.png" x="0" y="0" width="100%" height="100%" mask="url(#fade)" />
+            </svg>
             <h2 class="featurette-heading">Visualize
                 <span class="text-muted">your reports</span>
             </h2>
             <p class="lead">
-                Plottables are ready-to-use, standardized data visualization components. Pipe comes with many built-in Plottables (check them out <a href="http://pipend.github.io/pipe-web-client/">here</a>).
+                Plottables are ready-to-use, standardized data visualization components. 
+                Plottables are composable and interactive.
             </p>
             <p class="lead">
-                You can also create your own custom visualization or reusable Plottables in JavaScript.
+                Pipe comes with many built-in Plottables (check them out <a href="http://pipend.github.io/pipe-web-client/">here</a>).
+            </p>
+            <p class="lead">
+                Use Pipe's streaming features to share real-time visualizations.
+            </p>
+            <p class="lead">
+                You can also import 3rd party charting libraries or create your own custom visualizations or reusable Plottables in JavaScript.
             </p>
         </div>
 
         <hr class="featurette-divider">
 
-        <div class="featurette" id="contact">
-            <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
+        <div class="featurette" id="share">
+            <svg class="featurette-image img-responsive pull-left" width="500" height="500">
+              <image xlink:href="images/storyboards.png" x="0" y="0" width="100%" height="100%" mask="url(#fade)" />
+            </svg>
             <h2 class="featurette-heading">Share
                 <span class="text-muted">storyboards</span>
             </h2>
@@ -142,7 +180,22 @@
                 Pipe is a Gist for database queries and data analysis with collaboration, versioning, forking and access control.
             </p>
             <p class="lead">
+                You can create fast ad-hoc REST APIs in Pipe and share it with your customers and colleagues.
+            </p>
+            <p class="lead">
+                Create your queries in Pipe to share up-to-date reports with live visualizations instead of static Excel sheets.
+            </p>
+            <p class="lead">
                 Using Pipe's Storyboards you can create a full fledged dashboard and share it with your team in minutes.
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="featurette" id="contact">
+            <h3 class="featurette-heading">Contact</h3>
+            <p class="lead">
+                <a href="https://github.com/pipend">Pipe on GitHub</a>
             </p>
         </div>
 
@@ -152,7 +205,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Pipend 2016</p>
                 </div>
             </div>
         </footer>

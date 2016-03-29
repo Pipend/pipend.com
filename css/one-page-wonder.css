@@ -12,7 +12,7 @@ body {
     display: block;
     width: 100%;
     text-align: center;
-    background: url('http://placehold.it/1900x500') no-repeat center center scroll;
+    /*background: url('../images/pipe.svg') no-repeat center center scroll;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -30,7 +30,7 @@ body {
 }
 
 .headline h2 {
-    font-size: 77px;
+    font-size: 60px;
     background: #fff;
     background: rgba(255,255,255,0.9);
 }
@@ -54,9 +54,16 @@ body {
 .featurette-heading {
     font-size: 50px;
 }
+h3.featurette-heading {
+    font-size: 40px;
+}
 
 footer {
     margin: 50px 0;
+}
+
+.featurette-image {
+    max-width: 40%;
 }
 
 @media(max-width:1200px) {
